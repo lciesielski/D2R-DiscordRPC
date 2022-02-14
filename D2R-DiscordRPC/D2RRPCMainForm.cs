@@ -80,6 +80,18 @@ namespace D2RRPCWinForms
 			}
 		}
 
+		internal void EnableDiscordClientId()
+		{
+			if (BtnStopPresence.InvokeRequired)
+			{
+				BtnStopPresence.Invoke(new ThreadSafeDelegate(EnableDiscordClientId));
+			}
+			else
+			{
+				TextBoxDiscordClientId.Enabled = true;
+			}
+		}
+
 		internal void DisableStartButton()
 		{
 			if (BtnStartPresence.InvokeRequired)
@@ -104,6 +116,18 @@ namespace D2RRPCWinForms
 			}
 		}
 
+		internal void DisableDiscordClientId()
+		{
+			if (BtnStopPresence.InvokeRequired)
+			{
+				BtnStopPresence.Invoke(new ThreadSafeDelegate(DisableDiscordClientId));
+			}
+			else
+			{
+				TextBoxDiscordClientId.Enabled = false;
+			}
+		}
+
 		private void D2RRPCMainForm_Load(object sender, EventArgs e)
 		{
 			ComboBoxPlayerClass.Items.AddRange(new List<object>(classToIcon.Keys).ToArray());
@@ -123,7 +147,11 @@ namespace D2RRPCWinForms
 				}
 			}
 
-			if (!BtnStartPresence.Enabled) EnableStopButton();
+			if (!BtnStartPresence.Enabled)
+			{
+				DisableDiscordClientId();
+				EnableStopButton();
+			}
 		}
 
 		private void BtnExit_Click(object sender, EventArgs e)
@@ -179,6 +207,7 @@ namespace D2RRPCWinForms
 				presenceHelper.StartClient(TextBoxDiscordClientId.Text);
 				BtnStopPresence.Enabled = true;
 				BtnStartPresence.Enabled = false;
+				TextBoxDiscordClientId.Enabled = false;
 			}
 		}
 

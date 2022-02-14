@@ -48,6 +48,7 @@ namespace D2RRPCWinForms
 				mainForm.client.Dispose();
 				mainForm.DisableStopButton();
 				mainForm.EnableStartButton();
+				mainForm.EnableDiscordClientId();
 			}
 		}
 
