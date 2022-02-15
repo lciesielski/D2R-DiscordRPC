@@ -52,5 +52,17 @@ If I do not find any workaround for the above, there are always areas to improve
 
 ### Credits
 
-Blizzard & Vicarious Visions - assets (mostly from YT channel)
-Crimroxs - for [extracting](https://www.steamgriddb.com/game/5278139/icons) D2R Icon
+* Blizzard & Vicarious Visions - assets (mostly from promotional materials from [YouTube channel](https://www.youtube.com/c/Diablo))
+* Crimroxs - for [extracting](https://www.steamgriddb.com/game/5278139/icons) D2R Icons
+
+### Copyrights 
+
+Diablo II and Diablo II: Resurrected are copyrighted by Blizzard Entertainment, Inc. All rights reserved. 
+Diablo II, Diablo II: Resurrected and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
+All trademarks referenced here are the properties of their respective owners.
+
+For the sake of convenience some text files and image files that the discord application requires are provided in this repository. 
+These files are part of the Diablo II game series and are copyrighted by Blizzard Entertainment. 
+They are provided only to save you the trouble of extracting them from the Diablo II game files and\or other sources.
+
+This project and its maintainer(s) are not associated with or endorsed by Blizzard Entertainment, Inc.
