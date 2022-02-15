@@ -50,6 +50,7 @@ namespace D2RRPCWinForms
 
 			byte[] byteData = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(new RichPresenceSettings
 			{
+				DiscordClientId = mainForm.GetDiscordClientId(),
 				GameDifficulty = mainForm.GetGameDifficulty(),
 				GameState = mainForm.GetGameState(),
 				GameExePath = mainForm.GetGameExePath(),

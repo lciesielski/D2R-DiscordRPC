@@ -31,6 +31,11 @@ namespace D2RRPCWinForms
 			InitializeComponent();
 		}
 
+		internal string GetDiscordClientId()
+		{
+			return TextBoxDiscordClientId.Text;
+		}
+
 		internal string GetGameDifficulty()
 		{
 			return ComboBoxGameDifficulty.Text;

@@ -60,6 +60,7 @@ namespace D2RRPCWinForms
 			// 
 			// BtnExit
 			// 
+			this.BtnExit.AutoSize = true;
 			this.BtnExit.Location = new System.Drawing.Point(612, 491);
 			this.BtnExit.Name = "BtnExit";
 			this.BtnExit.Size = new System.Drawing.Size(150, 46);
@@ -112,6 +113,7 @@ namespace D2RRPCWinForms
 			// 
 			// GroupBoxPlayerInfo
 			// 
+			this.GroupBoxPlayerInfo.AutoSize = true;
 			this.GroupBoxPlayerInfo.Controls.Add(this.LabelPlayerClass);
 			this.GroupBoxPlayerInfo.Controls.Add(this.ComboBoxPlayerClass);
 			this.GroupBoxPlayerInfo.Controls.Add(this.NumUpDownPlayerLevel);
@@ -134,6 +136,7 @@ namespace D2RRPCWinForms
 			// 
 			// GroupBoxGameInfo
 			// 
+			this.GroupBoxGameInfo.AutoSize = true;
 			this.GroupBoxGameInfo.Controls.Add(this.ComboBoxGameState);
 			this.GroupBoxGameInfo.Controls.Add(this.LabelGameState);
 			this.GroupBoxGameInfo.Controls.Add(this.LabeGameDifficulty);
@@ -225,6 +228,7 @@ namespace D2RRPCWinForms
 			// 
 			// BtnStopPresence
 			// 
+			this.BtnStopPresence.AutoSize = true;
 			this.BtnStopPresence.Enabled = false;
 			this.BtnStopPresence.Location = new System.Drawing.Point(456, 491);
 			this.BtnStopPresence.Name = "BtnStopPresence";
@@ -236,6 +240,7 @@ namespace D2RRPCWinForms
 			// 
 			// BtnStartPresence
 			// 
+			this.BtnStartPresence.AutoSize = true;
 			this.BtnStartPresence.Location = new System.Drawing.Point(300, 491);
 			this.BtnStartPresence.Name = "BtnStartPresence";
 			this.BtnStartPresence.Size = new System.Drawing.Size(150, 46);
@@ -246,10 +251,11 @@ namespace D2RRPCWinForms
 			// 
 			// BtnFindDiabloExeFile
 			// 
+			this.BtnFindDiabloExeFile.AutoSize = true;
 			this.BtnFindDiabloExeFile.Image = ((System.Drawing.Image)(resources.GetObject("BtnFindDiabloExeFile.Image")));
 			this.BtnFindDiabloExeFile.Location = new System.Drawing.Point(698, 349);
 			this.BtnFindDiabloExeFile.Name = "BtnFindDiabloExeFile";
-			this.BtnFindDiabloExeFile.Size = new System.Drawing.Size(64, 64);
+			this.BtnFindDiabloExeFile.Size = new System.Drawing.Size(70, 70);
 			this.BtnFindDiabloExeFile.TabIndex = 11;
 			this.BtnFindDiabloExeFile.UseVisualStyleBackColor = true;
 			this.BtnFindDiabloExeFile.Click += new System.EventHandler(this.BtnFindDiabloExeFile_Click);
@@ -292,8 +298,8 @@ namespace D2RRPCWinForms
 			// 
 			// D2RRPCMainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(774, 549);
 			this.Controls.Add(this.TextBoxDiscordClientId);
 			this.Controls.Add(this.LabelDiscordClientId);
