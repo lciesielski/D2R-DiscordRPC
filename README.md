@@ -38,7 +38,7 @@ Alternatively, you do not have to specify game exe file, you can run the game se
 
 If you encounter SmartScreen notification about an unknown publisher, you will have to click on "More Information" and "Run anyway"
 
-If you are hesitant allowing program to run, I strongly encourage you to upload exe file to [VirusTotal](https://www.virustotal.com/gui/home/upload)
+If you are hesitant about allowing the program to run, I strongly encourage you to upload exe file to [VirusTotal](https://www.virustotal.com/gui/home/upload)
 
 ### Roadmap
 
