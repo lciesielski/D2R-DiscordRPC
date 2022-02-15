@@ -61,7 +61,7 @@ Diablo II and Diablo II: Resurrected are copyrighted by Blizzard Entertainment, 
 Diablo II, Diablo II: Resurrected and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
 All trademarks referenced here are the properties of their respective owners.
 
-For the sake of convenience some text files and image files that the discord application requires are provided in this repository. 
+For the sake of convenience some image files that the discord application requires are provided in this repository. 
 These files are part of the Diablo II game series and are copyrighted by Blizzard Entertainment. 
 They are provided only to save you the trouble of extracting them from the Diablo II game files and\or other sources.
 
