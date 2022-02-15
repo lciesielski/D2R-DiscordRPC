@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace D2RRPCWinForms
@@ -135,6 +136,21 @@ namespace D2RRPCWinForms
 
 		private void D2RRPCMainForm_Load(object sender, EventArgs e)
 		{
+			BtnFindDiabloExeFile.Image = Screen.PrimaryScreen.Bounds.Width switch
+			{
+				1024 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
+				1280 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
+				1360 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
+				1366 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
+				1920 => D2R_DiscordRPC.Properties.Resources.D2R_32x32.ToBitmap(),
+				2048 => D2R_DiscordRPC.Properties.Resources.D2R_32x32.ToBitmap(),
+				2560 => D2R_DiscordRPC.Properties.Resources.D2R_48x48.ToBitmap(),
+				3440 => D2R_DiscordRPC.Properties.Resources.D2R_64x64.ToBitmap(),
+				3840 => D2R_DiscordRPC.Properties.Resources.D2R_64x64.ToBitmap(),
+				4096 => D2R_DiscordRPC.Properties.Resources.D2R_64x64.ToBitmap(),
+				_ => D2R_DiscordRPC.Properties.Resources.D2R_32x32.ToBitmap(),
+			};
+
 			ComboBoxPlayerClass.Items.AddRange(new List<object>(classToIcon.Keys).ToArray());
 
 			settingsHelper = new SettingsHelper(this);
