@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace D2RRPCWinForms
@@ -24,6 +23,7 @@ namespace D2RRPCWinForms
 		public DiscordRpcClient client;
 		public SettingsHelper settingsHelper;
 		public PresenceHelper presenceHelper;
+		public LauncherHelper launcherHelper;
 
 		private delegate void ThreadSafeDelegate();
 
@@ -57,9 +57,9 @@ namespace D2RRPCWinForms
 			return ComboBoxGameState.Text;
 		}
 
-		internal string GetGameExePath()
+		internal string GetBattleNetExePath()
 		{
-			return TextBoxDiabloExePath.Text;
+			return TextBoxBattleNetExePath.Text;
 		}
 
 		internal void EnableStartButton()
@@ -136,25 +136,26 @@ namespace D2RRPCWinForms
 
 		private void D2RRPCMainForm_Load(object sender, EventArgs e)
 		{
-			BtnFindDiabloExeFile.Image = Screen.PrimaryScreen.Bounds.Width switch
+			BtnFindBattleNetExeFile.Image = Screen.PrimaryScreen.Bounds.Width switch
 			{
-				1024 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
-				1280 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
-				1360 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
-				1366 => D2R_DiscordRPC.Properties.Resources.D2R_16x16.ToBitmap(),
-				1920 => D2R_DiscordRPC.Properties.Resources.D2R_32x32.ToBitmap(),
-				2048 => D2R_DiscordRPC.Properties.Resources.D2R_32x32.ToBitmap(),
-				2560 => D2R_DiscordRPC.Properties.Resources.D2R_48x48.ToBitmap(),
-				3440 => D2R_DiscordRPC.Properties.Resources.D2R_64x64.ToBitmap(),
-				3840 => D2R_DiscordRPC.Properties.Resources.D2R_64x64.ToBitmap(),
-				4096 => D2R_DiscordRPC.Properties.Resources.D2R_64x64.ToBitmap(),
-				_ => D2R_DiscordRPC.Properties.Resources.D2R_32x32.ToBitmap(),
+				1024 => D2R_DiscordRPC.Properties.Resources.BNET_16x16.ToBitmap(),
+				1280 => D2R_DiscordRPC.Properties.Resources.BNET_16x16.ToBitmap(),
+				1360 => D2R_DiscordRPC.Properties.Resources.BNET_16x16.ToBitmap(),
+				1366 => D2R_DiscordRPC.Properties.Resources.BNET_16x16.ToBitmap(),
+				1920 => D2R_DiscordRPC.Properties.Resources.BNET_32x32.ToBitmap(),
+				2048 => D2R_DiscordRPC.Properties.Resources.BNET_32x32.ToBitmap(),
+				2560 => D2R_DiscordRPC.Properties.Resources.BNET_64x64.ToBitmap(),
+				3440 => D2R_DiscordRPC.Properties.Resources.BNET_64x64.ToBitmap(),
+				3840 => D2R_DiscordRPC.Properties.Resources.BNET_64x64.ToBitmap(),
+				4096 => D2R_DiscordRPC.Properties.Resources.BNET_64x64.ToBitmap(),
+				_ => D2R_DiscordRPC.Properties.Resources.BNET_32x32.ToBitmap(),
 			};
 
 			ComboBoxPlayerClass.Items.AddRange(new List<object>(classToIcon.Keys).ToArray());
 
 			settingsHelper = new SettingsHelper(this);
 			presenceHelper = new PresenceHelper(this);
+			launcherHelper = new LauncherHelper(this);
 
 			SettingsHelper.RichPresenceSettings richPresenceData = settingsHelper.LoadRichPresenceSettingsSilent();
 			if (richPresenceData != null)
@@ -162,7 +163,7 @@ namespace D2RRPCWinForms
 				UpdateFormFromSettings(richPresenceData);
 				if (!IsFormDataMissing())
 				{
-					presenceHelper.HandleDiabloProcess();
+					launcherHelper.HandleDiabloProcess();
 					presenceHelper.StartClient(richPresenceData.DiscordClientId);
 					DisableStartButton();
 				}
@@ -224,7 +225,7 @@ namespace D2RRPCWinForms
 			}
 			else
 			{
-				presenceHelper.HandleDiabloProcess();
+				launcherHelper.HandleDiabloProcess();
 				presenceHelper.StartClient(TextBoxDiscordClientId.Text);
 				BtnStopPresence.Enabled = true;
 				BtnStartPresence.Enabled = false;
@@ -237,7 +238,7 @@ namespace D2RRPCWinForms
 			TextBoxDiscordClientId.Text = richPresenceData.DiscordClientId;
 			ComboBoxGameState.Text = richPresenceData.GameState;
 			ComboBoxGameDifficulty.Text = richPresenceData.GameDifficulty;
-			TextBoxDiabloExePath.Text = richPresenceData.GameExePath;
+			TextBoxBattleNetExePath.Text = richPresenceData.GameExePath;
 			ComboBoxPlayerClass.Text = richPresenceData.PlayerClass;
 			NumUpDownPlayerLevel.Value = richPresenceData.PlayerLevel;
 		}
@@ -250,7 +251,7 @@ namespace D2RRPCWinForms
 				string.IsNullOrEmpty(ComboBoxGameState.Text) ||
 				string.IsNullOrEmpty(ComboBoxPlayerClass.Text) ||
 				string.IsNullOrEmpty(NumUpDownPlayerLevel.Value.ToString()) ||
-				(string.IsNullOrEmpty(TextBoxDiabloExePath.Text) && Process.GetProcessesByName(settingsHelper.DEFAULT_DIABLO_EXE_FILE_NAME).Length == 0);
+				(string.IsNullOrEmpty(TextBoxBattleNetExePath.Text) && Process.GetProcessesByName(settingsHelper.DEFAULT_DIABLO_EXE_FILE_NAME).Length == 0);
 		}
 
 		private void ComboBoxGameDifficulty_TextChanged(object sender, EventArgs e)
@@ -275,7 +276,7 @@ namespace D2RRPCWinForms
 
 		private void BtnFindDiabloExeFile_Click(object sender, EventArgs e)
 		{
-			TextBoxDiabloExePath.Text = settingsHelper.GetDiabloExeFilePath();
+			TextBoxBattleNetExePath.Text = settingsHelper.GetBattleNetExeFilePath();
 		}
 	}
 }

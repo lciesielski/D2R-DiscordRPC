@@ -47,11 +47,11 @@ namespace D2RRPCWinForms
 			this.LoadSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.BtnStopPresence = new System.Windows.Forms.Button();
 			this.BtnStartPresence = new System.Windows.Forms.Button();
-			this.TextBoxDiabloExePath = new System.Windows.Forms.TextBox();
+			this.TextBoxBattleNetExePath = new System.Windows.Forms.TextBox();
 			this.LabelDiabloExeFilePath = new System.Windows.Forms.Label();
 			this.LabelDiscordClientId = new System.Windows.Forms.Label();
 			this.TextBoxDiscordClientId = new System.Windows.Forms.TextBox();
-			this.BtnFindDiabloExeFile = new System.Windows.Forms.Button();
+			this.BtnFindBattleNetExeFile = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.NumUpDownPlayerLevel)).BeginInit();
 			this.GroupBoxPlayerInfo.SuspendLayout();
 			this.GroupBoxGameInfo.SuspendLayout();
@@ -62,7 +62,7 @@ namespace D2RRPCWinForms
 			// 
 			this.BtnExit.AutoSize = true;
 			this.BtnExit.Location = new System.Drawing.Point(612, 492);
-			this.BtnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
 			this.BtnExit.Name = "BtnExit";
 			this.BtnExit.Size = new System.Drawing.Size(150, 50);
 			this.BtnExit.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace D2RRPCWinForms
 			// NumUpDownPlayerLevel
 			// 
 			this.NumUpDownPlayerLevel.Location = new System.Drawing.Point(154, 102);
-			this.NumUpDownPlayerLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.NumUpDownPlayerLevel.Margin = new System.Windows.Forms.Padding(4);
 			this.NumUpDownPlayerLevel.Maximum = new decimal(new int[] {
 			99,
 			0,
@@ -110,7 +110,7 @@ namespace D2RRPCWinForms
 			this.ComboBoxPlayerClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.ComboBoxPlayerClass.FormattingEnabled = true;
 			this.ComboBoxPlayerClass.Location = new System.Drawing.Point(152, 36);
-			this.ComboBoxPlayerClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ComboBoxPlayerClass.Margin = new System.Windows.Forms.Padding(4);
 			this.ComboBoxPlayerClass.Name = "ComboBoxPlayerClass";
 			this.ComboBoxPlayerClass.Size = new System.Drawing.Size(196, 40);
 			this.ComboBoxPlayerClass.TabIndex = 3;
@@ -124,9 +124,9 @@ namespace D2RRPCWinForms
 			this.GroupBoxPlayerInfo.Controls.Add(this.NumUpDownPlayerLevel);
 			this.GroupBoxPlayerInfo.Controls.Add(this.LabelPlayerLevel);
 			this.GroupBoxPlayerInfo.Location = new System.Drawing.Point(402, 44);
-			this.GroupBoxPlayerInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.GroupBoxPlayerInfo.Margin = new System.Windows.Forms.Padding(4);
 			this.GroupBoxPlayerInfo.Name = "GroupBoxPlayerInfo";
-			this.GroupBoxPlayerInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.GroupBoxPlayerInfo.Padding = new System.Windows.Forms.Padding(4);
 			this.GroupBoxPlayerInfo.Size = new System.Drawing.Size(360, 300);
 			this.GroupBoxPlayerInfo.TabIndex = 5;
 			this.GroupBoxPlayerInfo.TabStop = false;
@@ -150,9 +150,9 @@ namespace D2RRPCWinForms
 			this.GroupBoxGameInfo.Controls.Add(this.LabeGameDifficulty);
 			this.GroupBoxGameInfo.Controls.Add(this.ComboBoxGameDifficulty);
 			this.GroupBoxGameInfo.Location = new System.Drawing.Point(12, 44);
-			this.GroupBoxGameInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.GroupBoxGameInfo.Margin = new System.Windows.Forms.Padding(4);
 			this.GroupBoxGameInfo.Name = "GroupBoxGameInfo";
-			this.GroupBoxGameInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.GroupBoxGameInfo.Padding = new System.Windows.Forms.Padding(4);
 			this.GroupBoxGameInfo.Size = new System.Drawing.Size(384, 300);
 			this.GroupBoxGameInfo.TabIndex = 6;
 			this.GroupBoxGameInfo.TabStop = false;
@@ -166,7 +166,7 @@ namespace D2RRPCWinForms
 			"Slaying Demons",
 			"Chilling in Town"});
 			this.ComboBoxGameState.Location = new System.Drawing.Point(148, 104);
-			this.ComboBoxGameState.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ComboBoxGameState.Margin = new System.Windows.Forms.Padding(4);
 			this.ComboBoxGameState.Name = "ComboBoxGameState";
 			this.ComboBoxGameState.Size = new System.Drawing.Size(224, 40);
 			this.ComboBoxGameState.TabIndex = 5;
@@ -201,7 +201,7 @@ namespace D2RRPCWinForms
 			"Nightmare",
 			"Hell"});
 			this.ComboBoxGameDifficulty.Location = new System.Drawing.Point(192, 40);
-			this.ComboBoxGameDifficulty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ComboBoxGameDifficulty.Margin = new System.Windows.Forms.Padding(4);
 			this.ComboBoxGameDifficulty.Name = "ComboBoxGameDifficulty";
 			this.ComboBoxGameDifficulty.Size = new System.Drawing.Size(180, 40);
 			this.ComboBoxGameDifficulty.TabIndex = 3;
@@ -245,7 +245,7 @@ namespace D2RRPCWinForms
 			this.BtnStopPresence.AutoSize = true;
 			this.BtnStopPresence.Enabled = false;
 			this.BtnStopPresence.Location = new System.Drawing.Point(456, 492);
-			this.BtnStopPresence.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.BtnStopPresence.Margin = new System.Windows.Forms.Padding(4);
 			this.BtnStopPresence.Name = "BtnStopPresence";
 			this.BtnStopPresence.Size = new System.Drawing.Size(150, 50);
 			this.BtnStopPresence.TabIndex = 8;
@@ -257,7 +257,7 @@ namespace D2RRPCWinForms
 			// 
 			this.BtnStartPresence.AutoSize = true;
 			this.BtnStartPresence.Location = new System.Drawing.Point(300, 492);
-			this.BtnStartPresence.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.BtnStartPresence.Margin = new System.Windows.Forms.Padding(4);
 			this.BtnStartPresence.Name = "BtnStartPresence";
 			this.BtnStartPresence.Size = new System.Drawing.Size(150, 50);
 			this.BtnStartPresence.TabIndex = 9;
@@ -265,14 +265,14 @@ namespace D2RRPCWinForms
 			this.BtnStartPresence.UseVisualStyleBackColor = true;
 			this.BtnStartPresence.Click += new System.EventHandler(this.BtnStartPresence_Click);
 			// 
-			// TextBoxDiabloExePath
+			// TextBoxBattleNetExePath
 			// 
-			this.TextBoxDiabloExePath.Location = new System.Drawing.Point(198, 362);
-			this.TextBoxDiabloExePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.TextBoxDiabloExePath.Name = "TextBoxDiabloExePath";
-			this.TextBoxDiabloExePath.ReadOnly = true;
-			this.TextBoxDiabloExePath.Size = new System.Drawing.Size(494, 39);
-			this.TextBoxDiabloExePath.TabIndex = 12;
+			this.TextBoxBattleNetExePath.Location = new System.Drawing.Point(232, 362);
+			this.TextBoxBattleNetExePath.Margin = new System.Windows.Forms.Padding(4);
+			this.TextBoxBattleNetExePath.Name = "TextBoxBattleNetExePath";
+			this.TextBoxBattleNetExePath.ReadOnly = true;
+			this.TextBoxBattleNetExePath.Size = new System.Drawing.Size(460, 39);
+			this.TextBoxBattleNetExePath.TabIndex = 12;
 			// 
 			// LabelDiabloExeFilePath
 			// 
@@ -280,14 +280,14 @@ namespace D2RRPCWinForms
 			this.LabelDiabloExeFilePath.Location = new System.Drawing.Point(13, 365);
 			this.LabelDiabloExeFilePath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.LabelDiabloExeFilePath.Name = "LabelDiabloExeFilePath";
-			this.LabelDiabloExeFilePath.Size = new System.Drawing.Size(179, 32);
+			this.LabelDiabloExeFilePath.Size = new System.Drawing.Size(211, 32);
 			this.LabelDiabloExeFilePath.TabIndex = 13;
-			this.LabelDiabloExeFilePath.Text = "Diablo Exe Path";
+			this.LabelDiabloExeFilePath.Text = "Battle.net Exe Path";
 			// 
 			// LabelDiscordClientId
 			// 
 			this.LabelDiscordClientId.AutoSize = true;
-			this.LabelDiscordClientId.Location = new System.Drawing.Point(4, 427);
+			this.LabelDiscordClientId.Location = new System.Drawing.Point(18, 424);
 			this.LabelDiscordClientId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.LabelDiscordClientId.Name = "LabelDiscordClientId";
 			this.LabelDiscordClientId.Size = new System.Drawing.Size(193, 32);
@@ -296,24 +296,24 @@ namespace D2RRPCWinForms
 			// 
 			// TextBoxDiscordClientId
 			// 
-			this.TextBoxDiscordClientId.Location = new System.Drawing.Point(198, 424);
-			this.TextBoxDiscordClientId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.TextBoxDiscordClientId.Location = new System.Drawing.Point(232, 424);
+			this.TextBoxDiscordClientId.Margin = new System.Windows.Forms.Padding(4);
 			this.TextBoxDiscordClientId.Name = "TextBoxDiscordClientId";
 			this.TextBoxDiscordClientId.PasswordChar = '*';
 			this.TextBoxDiscordClientId.PlaceholderText = "Discord Client ID";
-			this.TextBoxDiscordClientId.Size = new System.Drawing.Size(494, 39);
+			this.TextBoxDiscordClientId.Size = new System.Drawing.Size(460, 39);
 			this.TextBoxDiscordClientId.TabIndex = 15;
 			this.TextBoxDiscordClientId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// BtnFindDiabloExeFile
+			// BtnFindBattleNetExeFile
 			// 
-			this.BtnFindDiabloExeFile.Location = new System.Drawing.Point(698, 348);
-			this.BtnFindDiabloExeFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.BtnFindDiabloExeFile.Name = "BtnFindDiabloExeFile";
-			this.BtnFindDiabloExeFile.Size = new System.Drawing.Size(64, 64);
-			this.BtnFindDiabloExeFile.TabIndex = 11;
-			this.BtnFindDiabloExeFile.UseVisualStyleBackColor = true;
-			this.BtnFindDiabloExeFile.Click += new System.EventHandler(this.BtnFindDiabloExeFile_Click);
+			this.BtnFindBattleNetExeFile.Location = new System.Drawing.Point(698, 348);
+			this.BtnFindBattleNetExeFile.Margin = new System.Windows.Forms.Padding(4);
+			this.BtnFindBattleNetExeFile.Name = "BtnFindBattleNetExeFile";
+			this.BtnFindBattleNetExeFile.Size = new System.Drawing.Size(64, 64);
+			this.BtnFindBattleNetExeFile.TabIndex = 11;
+			this.BtnFindBattleNetExeFile.UseVisualStyleBackColor = true;
+			this.BtnFindBattleNetExeFile.Click += new System.EventHandler(this.BtnFindDiabloExeFile_Click);
 			// 
 			// D2RRPCMainForm
 			// 
@@ -323,8 +323,8 @@ namespace D2RRPCWinForms
 			this.Controls.Add(this.TextBoxDiscordClientId);
 			this.Controls.Add(this.LabelDiscordClientId);
 			this.Controls.Add(this.LabelDiabloExeFilePath);
-			this.Controls.Add(this.TextBoxDiabloExePath);
-			this.Controls.Add(this.BtnFindDiabloExeFile);
+			this.Controls.Add(this.TextBoxBattleNetExePath);
+			this.Controls.Add(this.BtnFindBattleNetExeFile);
 			this.Controls.Add(this.BtnStartPresence);
 			this.Controls.Add(this.BtnStopPresence);
 			this.Controls.Add(this.GroupBoxGameInfo);
@@ -334,7 +334,7 @@ namespace D2RRPCWinForms
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.MainFormMenuStrip;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "D2RRPCMainForm";
 			this.Text = "Diablo 2 Resurrected Rich Presence";
@@ -370,11 +370,11 @@ namespace D2RRPCWinForms
 		private System.Windows.Forms.Button BtnStartPresence;
 		private System.Windows.Forms.ComboBox ComboBoxGameState;
 		private System.Windows.Forms.Label LabelGameState;
-		private System.Windows.Forms.TextBox TextBoxDiabloExePath;
+		private System.Windows.Forms.TextBox TextBoxBattleNetExePath;
 		private System.Windows.Forms.Label LabelDiabloExeFilePath;
 		private System.Windows.Forms.Label LabelDiscordClientId;
 		private System.Windows.Forms.TextBox TextBoxDiscordClientId;
-		private System.Windows.Forms.Button BtnFindDiabloExeFile;
+		private System.Windows.Forms.Button BtnFindBattleNetExeFile;
 	}
 }
 

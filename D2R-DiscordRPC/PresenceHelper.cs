@@ -1,6 +1,5 @@
 ﻿using DiscordRPC;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace D2RRPCWinForms
 {
@@ -50,39 +49,6 @@ namespace D2RRPCWinForms
 				mainForm.EnableStartButton();
 				mainForm.EnableDiscordClientId();
 			}
-		}
-
-		public void HandleDiabloProcess()
-		{
-			Process diabloProcess;
-			Process[] currentDiabloProcess = Process.GetProcessesByName(mainForm.settingsHelper.DEFAULT_DIABLO_EXE_FILE_NAME);
-
-			if (currentDiabloProcess.Length > 0)
-			{
-				diabloProcess = currentDiabloProcess[0];
-				diabloProcess.EnableRaisingEvents = true;
-			}
-			else
-			{
-				diabloProcess = new Process
-				{
-					StartInfo = new ProcessStartInfo
-					{
-						FileName = mainForm.GetGameExePath(),
-						Arguments = "-bn"
-					},
-					EnableRaisingEvents = true
-				};
-
-				diabloProcess.Start();
-			}
-
-			diabloProcess.Exited += (sender, e) =>
-			{
-				StopClient();
-				Debug.WriteLine("Process exited with exit code " + diabloProcess.ExitCode.ToString());
-			};
-
 		}
 	}
 }

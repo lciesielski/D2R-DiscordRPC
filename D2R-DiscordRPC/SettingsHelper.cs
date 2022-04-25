@@ -11,6 +11,7 @@ namespace D2RRPCWinForms
 		public readonly string DEFAULT_LARGE_ICON_NAME = "d2r_background";
 		public readonly string DEFAULT_LARGE_ICON_TITLE = "Diablo 2 Resurrected";
 		public readonly string DEFAULT_DIABLO_EXE_FILE_NAME = "D2R";
+		public readonly string DEFAULT_BATTLE_NET_EXE_FILE_NAME = "Battle.net";
 
 		public D2RRPCMainForm mainForm;
 		
@@ -53,7 +54,7 @@ namespace D2RRPCWinForms
 				DiscordClientId = mainForm.GetDiscordClientId(),
 				GameDifficulty = mainForm.GetGameDifficulty(),
 				GameState = mainForm.GetGameState(),
-				GameExePath = mainForm.GetGameExePath(),
+				GameExePath = mainForm.GetBattleNetExePath(),
 				PlayerClass = mainForm.GetPlayerClass(),
 				PlayerLevel = mainForm.GetPlayerLevel()
 			}));
@@ -98,17 +99,17 @@ namespace D2RRPCWinForms
 			}
 		}
 
-		public string GetDiabloExeFilePath()
+		public string GetBattleNetExeFilePath()
 		{
-			string currentPath = mainForm.GetGameExePath();
+			string currentPath = mainForm.GetBattleNetExePath();
 
 			OpenFileDialog openFileDialog = new OpenFileDialog
 			{
-				Filter = $"{DEFAULT_DIABLO_EXE_FILE_NAME}.{DEFAULT_EXECUTABLE_EXTENSION}|{DEFAULT_DIABLO_EXE_FILE_NAME}.{DEFAULT_EXECUTABLE_EXTENSION}",
+				Filter = $"{DEFAULT_BATTLE_NET_EXE_FILE_NAME}.{DEFAULT_EXECUTABLE_EXTENSION}|{DEFAULT_BATTLE_NET_EXE_FILE_NAME}.{DEFAULT_EXECUTABLE_EXTENSION}",
 				DefaultExt = DEFAULT_EXECUTABLE_EXTENSION,
-				Title = "Get Diablo 2 Resurrected EXE",
+				Title = "Get Battle.Net EXE",
 				AddExtension = true,
-				FileName = $"{DEFAULT_DIABLO_EXE_FILE_NAME}.{DEFAULT_EXECUTABLE_EXTENSION}",
+				FileName = $"{DEFAULT_BATTLE_NET_EXE_FILE_NAME}.{DEFAULT_EXECUTABLE_EXTENSION}",
 				InitialDirectory = string.IsNullOrEmpty(currentPath) ? Environment.CurrentDirectory : currentPath
 			};
 

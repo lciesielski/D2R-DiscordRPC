@@ -63,6 +63,56 @@ namespace D2R_DiscordRPC.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Icon podobny do zasobu (Ikona).
         /// </summary>
+        internal static System.Drawing.Icon BNET_128x128 {
+            get {
+                object obj = ResourceManager.GetObject("BNET_128x128", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Icon podobny do zasobu (Ikona).
+        /// </summary>
+        internal static System.Drawing.Icon BNET_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("BNET_16x16", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Icon podobny do zasobu (Ikona).
+        /// </summary>
+        internal static System.Drawing.Icon BNET_256x256 {
+            get {
+                object obj = ResourceManager.GetObject("BNET_256x256", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Icon podobny do zasobu (Ikona).
+        /// </summary>
+        internal static System.Drawing.Icon BNET_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("BNET_32x32", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Icon podobny do zasobu (Ikona).
+        /// </summary>
+        internal static System.Drawing.Icon BNET_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("BNET_64x64", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Icon podobny do zasobu (Ikona).
+        /// </summary>
         internal static System.Drawing.Icon D2R_128x128 {
             get {
                 object obj = ResourceManager.GetObject("D2R_128x128", resourceCulture);
@@ -96,16 +146,6 @@ namespace D2R_DiscordRPC.Properties {
         internal static System.Drawing.Icon D2R_32x32 {
             get {
                 object obj = ResourceManager.GetObject("D2R_32x32", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Icon podobny do zasobu (Ikona).
-        /// </summary>
-        internal static System.Drawing.Icon D2R_48x48 {
-            get {
-                object obj = ResourceManager.GetObject("D2R_48x48", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

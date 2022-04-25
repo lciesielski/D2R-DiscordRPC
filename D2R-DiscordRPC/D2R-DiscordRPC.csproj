@@ -6,12 +6,15 @@
     <RootNamespace>D2R_DiscordRPC</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <Platforms>x64</Platforms>
-	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
-	<ApplicationIcon>D2R Icon.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationIcon>D2R Icon.ico</ApplicationIcon>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.5.5.20211231" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
