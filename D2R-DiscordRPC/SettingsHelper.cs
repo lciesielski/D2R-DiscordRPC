@@ -30,7 +30,7 @@ namespace D2RRPCWinForms
 			public string DiscordClientId { get; set; }
 			public string GameDifficulty { get; set; }
 			public string GameState { get; set; }
-			public string GameExePath { get; set; }
+			public string BattleNetExePath { get; set; }
 			public string PlayerClass { get; set; }
 			public int PlayerLevel { get; set; }
 		}
@@ -54,7 +54,7 @@ namespace D2RRPCWinForms
 				DiscordClientId = mainForm.GetDiscordClientId(),
 				GameDifficulty = mainForm.GetGameDifficulty(),
 				GameState = mainForm.GetGameState(),
-				GameExePath = mainForm.GetBattleNetExePath(),
+				BattleNetExePath = mainForm.GetBattleNetExePath(),
 				PlayerClass = mainForm.GetPlayerClass(),
 				PlayerLevel = mainForm.GetPlayerLevel()
 			}));

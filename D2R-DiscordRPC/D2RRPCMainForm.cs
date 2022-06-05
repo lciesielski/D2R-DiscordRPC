@@ -238,7 +238,7 @@ namespace D2RRPCWinForms
 			TextBoxDiscordClientId.Text = richPresenceData.DiscordClientId;
 			ComboBoxGameState.Text = richPresenceData.GameState;
 			ComboBoxGameDifficulty.Text = richPresenceData.GameDifficulty;
-			TextBoxBattleNetExePath.Text = richPresenceData.GameExePath;
+			TextBoxBattleNetExePath.Text = richPresenceData.BattleNetExePath;
 			ComboBoxPlayerClass.Text = richPresenceData.PlayerClass;
 			NumUpDownPlayerLevel.Value = richPresenceData.PlayerLevel;
 		}

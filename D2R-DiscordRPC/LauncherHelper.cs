@@ -125,7 +125,7 @@ namespace D2RRPCWinForms
 					}
 				};
 				battleNetProcess.Start();
-				Thread.Sleep(8000);
+				Thread.Sleep(10000);
 			}
 
 			if (diabloProcess != null)
